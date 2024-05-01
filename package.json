@@ -1,0 +1,33 @@
+{
+  "name": "discord-user-installable",
+  "version": "0.1.0",
+  "description": "Represents a Discord User-Installable Command",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loldonut/discord-user-installable.git"
+  },
+  "author": "John Heinrich",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/loldonut/discord-user-installable/issues"
+  },
+  "homepage": "https://github.com/loldonut/discord-user-installable#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "as-needed",
+    "trailingComma": "all"
+  }
+}
