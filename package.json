@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "types": "./typings.d.ts",
   "files": [
-    "src"
+    "src",
+    "typings.d.ts"
   ],
   "scripts": {
     "prettier": "prettier . --write"
