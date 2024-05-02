@@ -1,5 +1,3 @@
-'use strict';
-
 import { SlashCommandBuilder } from '@discordjs/builders';
 
 import {
