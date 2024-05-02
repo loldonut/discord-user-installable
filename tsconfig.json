@@ -24,7 +24,9 @@
     "moduleResolution": "NodeNext",
 
     "pretty": false,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+
+    "isolatedModules": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]

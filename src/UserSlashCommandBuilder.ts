@@ -1,45 +1,42 @@
 'use strict';
 
-const { SlashCommandBuilder } = require('@discordjs/builders');
+import { SlashCommandBuilder } from '@discordjs/builders';
 
-const {
+import {
   InteractionContextType,
   InteractionIntegrationType,
-} = require('./Constants');
-const { validateContexts } = require('./validate');
+} from './Constants.js';
+import { validateContexts } from './validate.js';
 
 /**
  * @class
  * @extends {SlashCommandBuilder}
  * */
 class UserSlashCommandBuilder extends SlashCommandBuilder {
+  public readonly integration_types!: InteractionIntegrationType[];
+  public readonly contexts!: InteractionContextType[];
+
   /**
    * A Builder for user-installable bot to create user or global commands
    *
    * @constructor
    */
-  constructor() {
+  public constructor() {
     super();
-    /**
-     * @type {Array<InteractionIntegrationType>}
-     * */
-    this.integration_types = [InteractionIntegrationType.UserInstall];
 
-    /**
-     * @type {Array<InteractionContextType>}
-     * */
-    this.contexts = [
+    Reflect.set(this, 'integration_types', [InteractionIntegrationType.UserInstall]);
+    Reflect.set(this, 'contexts', [
       InteractionContextType.Guild,
       InteractionContextType.BotDm,
       InteractionContextType.PrivateChannel,
-    ];
+    ]);
   }
 
   /**
    * Set command as usable for both as a Guild Bot
    * and as a user-installed application
    *
-   * @returns {UserSlashCommandBuilder}
+   * @returns
    * */
   setGlobalCommand() {
     this.integration_types.push(InteractionIntegrationType.GuildInstall);
@@ -50,13 +47,13 @@ class UserSlashCommandBuilder extends SlashCommandBuilder {
    * Set specific contexts on where the command should be installed
    * (Overrides the default value where it can be accessed anywhere)
    *
-   * @param {Array<InteractionContextType>} contexts
+   * @param contexts - Contexts of the command
    * @returns
    * */
-  setContexts(contexts) {
+  setContexts(contexts: InteractionContextType) {
     validateContexts(contexts);
 
-    this.contexts = contexts;
+    Reflect.set(this, 'contexts', contexts);
     return this;
   }
 }
