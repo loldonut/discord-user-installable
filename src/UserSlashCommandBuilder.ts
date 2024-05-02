@@ -50,7 +50,7 @@ export class UserSlashCommandBuilder extends SlashCommandBuilder {
    * @param contexts - Contexts of the command
    * @returns
    * */
-  setContexts(contexts: InteractionContextType) {
+  setContexts(contexts: InteractionContextType[]) {
     validateContexts(contexts);
 
     Reflect.set(this, 'contexts', contexts);
