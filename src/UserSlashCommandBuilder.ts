@@ -12,7 +12,7 @@ import { validateContexts } from './validate.js';
  * @class
  * @extends {SlashCommandBuilder}
  * */
-class UserSlashCommandBuilder extends SlashCommandBuilder {
+export class UserSlashCommandBuilder extends SlashCommandBuilder {
   public readonly integration_types!: InteractionIntegrationType[];
   public readonly contexts!: InteractionContextType[];
 
@@ -57,5 +57,3 @@ class UserSlashCommandBuilder extends SlashCommandBuilder {
     return this;
   }
 }
-
-module.exports = UserSlashCommandBuilder;

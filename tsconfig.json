@@ -26,6 +26,7 @@
     "pretty": false,
     "skipDefaultLibCheck": true,
 
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true
   },
   "include": ["src/**/*.ts"],
