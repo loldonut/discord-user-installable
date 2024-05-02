@@ -2,7 +2,7 @@
   "name": "discord-user-installable",
   "version": "0.1.0",
   "description": "Represents a Discord User-Installable Command",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "types": "./typings.d.ts",
   "files": [
     "src",
