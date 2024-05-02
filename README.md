@@ -7,7 +7,6 @@
 
 > This package is a temporary solution to create user-installable slash commands since `discord.js` currently does not support this.
 
-
 ### Install
 
 Install the package from GitHub
@@ -28,21 +27,21 @@ const { REST, Routes } = require('discord.js');
 const { UserSlashCommandBuilder } = require('discord-user-installable');
 
 const PING_COMMAND = new UserSlashCommandBuilder()
-    .setName('ping')
-    .setDescription('Pong!');
+  .setName('ping')
+  .setDescription('Pong!');
 
 const PONG_COMMAND = new UserSlashCommandBuilder()
-    .setName('pong')
-    .setDescription('Ping!');
+  .setName('pong')
+  .setDescription('Ping!');
 
-const commands = [PING_COMMAND, PONG_COMMAND]
-    .map((cmd) => cmd.toJSON());
+const commands = [PING_COMMAND, PONG_COMMAND].map((cmd) => cmd.toJSON());
 
 const rest = new REST().setToken('client-token');
 
-rest.put(Routes.applicationCommands('client-id'), {
+rest
+  .put(Routes.applicationCommands('client-id'), {
     body: commands,
-})
-.then(() => console.log('Registered commands'))
-.catch(console.error);
+  })
+  .then(() => console.log('Registered commands'))
+  .catch(console.error);
 ```

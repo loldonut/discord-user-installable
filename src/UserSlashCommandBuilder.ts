@@ -24,7 +24,9 @@ export class UserSlashCommandBuilder extends SlashCommandBuilder {
   public constructor() {
     super();
 
-    Reflect.set(this, 'integration_types', [InteractionIntegrationType.UserInstall]);
+    Reflect.set(this, 'integration_types', [
+      InteractionIntegrationType.UserInstall,
+    ]);
     Reflect.set(this, 'contexts', [
       InteractionContextType.Guild,
       InteractionContextType.BotDm,
@@ -38,7 +40,7 @@ export class UserSlashCommandBuilder extends SlashCommandBuilder {
    *
    * @returns
    * */
-  setGlobalCommand() {
+  public setGlobalCommand() {
     this.integration_types.push(InteractionIntegrationType.GuildInstall);
     return this;
   }
@@ -50,7 +52,7 @@ export class UserSlashCommandBuilder extends SlashCommandBuilder {
    * @param contexts - Contexts of the command
    * @returns
    * */
-  setContexts(contexts: InteractionContextType[]) {
+  public setContexts(contexts: InteractionContextType[]) {
     validateContexts(contexts);
 
     Reflect.set(this, 'contexts', contexts);

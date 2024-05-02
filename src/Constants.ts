@@ -7,7 +7,7 @@ export enum InteractionContextType {
   Guild,
   BotDm,
   PrivateChannel,
-};
+}
 
 /***
  * Enum for Interaction Integration Types
@@ -17,5 +17,4 @@ export enum InteractionContextType {
 export enum InteractionIntegrationType {
   GuildInstall,
   UserInstall,
-};
-
+}
