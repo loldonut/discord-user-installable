@@ -44,6 +44,18 @@ class UserSlashCommandBuilder extends SlashCommandBuilder {
     this.integration_types.push(InteractionIntegrationType.GuildInstall);
     return this;
   }
+
+  /**
+   * Set specific contexts on where the command should be installed
+   * (Overrides the default value where it can be accessed anywhere)
+   *
+   * @param {Array<InteractionContextType>} contexts
+   * @returns
+   * */
+  setContexts(contexts) {
+    this.contexts = contexts;
+    return this;
+  }
 }
 
 module.exports = UserSlashCommandBuilder;
