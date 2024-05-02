@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/loldonut/discord-user-installable#readme",
   "dependencies": {
-    "@discordjs/builders": "^1.7.0"
+    "@discordjs/builders": "^1.7.0",
+    "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@types/node": "^20.12.8",

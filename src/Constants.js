@@ -18,3 +18,8 @@ const InteractionIntegrationType = {
   GuildInstall: 0,
   UserInstall: 1,
 };
+
+module.exports = {
+  InteractionContextType,
+  InteractionIntegrationType,
+};
