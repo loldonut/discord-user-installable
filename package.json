@@ -2,7 +2,11 @@
   "name": "discord-user-installable",
   "version": "0.1.0",
   "description": "Represents a Discord User-Installable Command",
-  "main": "index.js",
+  "main": "src/index.js",
+  "types": "./typings.d.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "prettier": "prettier . --write"
   },
@@ -20,6 +24,7 @@
     "@discordjs/builders": "^1.7.0"
   },
   "devDependencies": {
+    "@types/node": "^20.12.8",
     "prettier": "^3.2.5"
   },
   "prettier": {

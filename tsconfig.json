@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "target": "ESNext",
+
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strict": true,
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "newLine": "lf",
+    "noEmitHelpers": true,
+    "outDir": "dist",
+    "removeComments": false,
+    "sourceMap": true,
+
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "pretty": false,
+    "skipDefaultLibCheck": true
+  },
+  "exclude": ["node_modules"]
+}
