@@ -6,6 +6,7 @@ const {
   InteractionContextType,
   InteractionIntegrationType,
 } = require('./Constants');
+const { validateContexts } = require('./validate');
 
 /**
  * @class
@@ -53,6 +54,8 @@ class UserSlashCommandBuilder extends SlashCommandBuilder {
    * @returns
    * */
   setContexts(contexts) {
+    validateContexts(contexts);
+
     this.contexts = contexts;
     return this;
   }

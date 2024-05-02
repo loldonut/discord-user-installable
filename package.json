@@ -23,6 +23,7 @@
   "homepage": "https://github.com/loldonut/discord-user-installable#readme",
   "dependencies": {
     "@discordjs/builders": "^1.7.0",
+    "@sapphire/shapeshift": "^3.9.7",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
