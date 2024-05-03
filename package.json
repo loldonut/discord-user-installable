@@ -17,7 +17,7 @@
     }
   },
   "directories": {
-      "lib": "src"
+    "lib": "src"
   },
   "files": [
     "dist"
